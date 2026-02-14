@@ -43,8 +43,6 @@ export const landingNavItems = [
   { label: "Destaques", href: "#destaques" },
   { label: "Coleção", href: "#colecao" },
   { label: "Comunidade", href: "#comunidade" },
-  { label: "Conteúdo", href: "#conteudo" },
-  { label: "Eventos", href: "#eventos" },
 ];
 
 export const heroFeatures = [

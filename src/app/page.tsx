@@ -10,7 +10,6 @@ import MetricsCard from "@/components/cards/MetricsCard";
 import ProductCard, { Rating } from "@/components/cards/ProductCard";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import Footer from "@/components/elements/Footer";
-import { HeroSection } from "@/components/elements/HeroSection";
 import LandingHeader from "@/components/elements/LandingHeader";
 import { Section } from "@/components/elements/Section";
 import BrandMarquee from "@/components/marketing/BrandMarquee";
@@ -22,7 +21,7 @@ import Title from "@/components/typography/Title";
 import { Check } from "@phosphor-icons/react";
 import { useState, type CSSProperties } from "react";
 
-import GLBSection from "@/components/media/GLBSection";
+import VideoSection from "@/components/elements/VideoSection";
 import {
   brandLogos,
   categoryItems,
@@ -105,52 +104,18 @@ export default function Home() {
       </div>
 
       <main className="flex flex-col">
-        <div id="destaques">
-          <HeroSection
-            size="full"
-            sectionClassName="relative overflow-hidden bg-gradient-to-br from-primary-50 via-background to-primary-100 py-16 sm:py-20"
-          >
-            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-primary-200/40 blur-3xl" />
-            <div className="pointer-events-none absolute right-12 top-1/3 h-24 w-24 rounded-[28px] bg-primary-400/60 rotate-12" />
-            <div className="pointer-events-none absolute -left-16 bottom-[-80px] h-56 w-56 rounded-full bg-secondary-200/40 blur-3xl" />
-
-            <div className="relative z-10 w-full max-w-7xl flex items-center justify-center">
-              <FadeContainer once className="w-full">
-                <div className="flex flex-col items-center gap-6">
-                  <Subtitle
-                    content="Edição Pro Azul 2026"
-                    className="text-xs sm:text-sm uppercase tracking-[0.35em] text-primary-700"
-                  />
-                  <Title
-                    content="Tênis colecionáveis feitos para a rua brasileira"
-                    element="h1"
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-center"
-                  />
-                  <Paragraph
-                    content="Performance urbana, amortecimento inteligente e estilo nacional. O Pro Azul nasceu para quem vive a cidade e não abre mão de conforto."
-                    className="text-base sm:text-lg text-foreground/70 max-w-xl"
-                  />
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      label="Conhecer o Pro Azul"
-                      variant="filled"
-                      className="rounded-full px-5 py-3 text-sm sm:text-base bg-secondary-900 text-white hover:bg-secondary-800"
-                    />
-                    <Button
-                      label="Ver a coleção completa"
-                      variant="outlined"
-                      className="rounded-full px-5 py-3 text-sm sm:text-base border-secondary-900 text-secondary-900 hover:bg-secondary-100"
-                    />
-                  </div>
-                  <Paragraph
-                    content="Frete grátis acima de R$ 399 para todo o Brasil."
-                    className="text-xs sm:text-sm text-foreground/60"
-                  />
-                </div>
-              </FadeContainer>
-            </div>
-          </HeroSection>
-        </div>
+        <VideoSection
+          size="full"
+          videoUrl="/videos/sneakers.mov"
+          // videoUrl="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4"
+          title="Tênis colecionáveis feitos para a rua brasileira"
+          description="Performance e estilo que acompanham seu ritmo urbano."
+          primaryButtonTitle="Comprar o Pro Azul"
+          secondaryButtonTitle="Explorar modelos"
+          containerClassName="h-[80vh]"
+          onPrimaryClick={() => console.log('Primary click')}
+          onSecondaryClick={() => console.log('Secondary click')}
+        />
 
         <Section size="full" sectionClassName="bg-background py-10">
           <div className="w-full max-w-7xl grid gap-6 md:grid-cols-3">
@@ -265,21 +230,6 @@ export default function Home() {
             </div>
           </Section>
         </div>
-        <GLBSection
-          glbModelPath="/models/nike_sneaker.glb"
-          height="100%"
-          animateOnScroll={true}
-          minYRotatePosition={-2.7}
-          maxYRotatePosition={1.7}
-          minXRotatePosition={0}
-          maxXRotatePosition={0}
-          minZRotatePosition={0}
-          maxZRotationPostion={0}
-          enablePan={false}
-          enableRotate={false}
-          enableZoom={false}
-          marginTop="1%"
-        />
 
         <Section size="full" sectionClassName="bg-background/80">
           <div className="w-full max-w-7xl flex flex-col">
