@@ -98,7 +98,7 @@ export default function ProductImageVisualizer({
           );
         })}
         {safeImages.length > 0 && (
-          <span className="text-xs text-foreground/70">{`${currentIndex + 1}/${
+          <span className="text-xs text-white/70">{`${currentIndex + 1}/${
             safeImages.length
           }`}</span>
         )}
@@ -169,7 +169,7 @@ export default function ProductImageVisualizer({
           </div>
         </div>
         {showHelperText && (
-          <p className="mt-2 text-xs text-foreground/70">
+          <p className="mt-2 text-xs text-white/70">
             Passe o mouse para ampliar • Use as setas ou os botões para navegar.
           </p>
         )}

@@ -56,7 +56,7 @@ export default function CategoryCard({
       )}
       aria-label={`Ver categoria ${name}`}
     >
-      <div className="flex h-16 w-16 sm:w-24 sm:h-24 items-center justify-center overflow-hidden rounded-full text-primary-600 text-3xl group-hover:bg-primary-50 dark:group-hover:bg-primary-500/10 bg-foreground/5">
+      <div className="flex h-16 w-16 sm:w-24 sm:h-24 items-center justify-center overflow-hidden rounded-full text-primary-600 text-3xl group-hover:bg-secondary-700 dark:group-hover:bg-primary-500/10 bg-foreground/5">
         {media}
       </div>
       <span className="mt-4 text-sm font-semibold text-primary-500 sm:text-base">

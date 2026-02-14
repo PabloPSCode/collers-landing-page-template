@@ -5,7 +5,7 @@ import { formatBRL } from "@/utils/format";
 import { ShoppingCartIcon, StarIcon, TimerIcon } from "@phosphor-icons/react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
-type Rating = 0 | 1 | 2 | 3 | 4 | 5;
+export type Rating = 0 | 1 | 2 | 3 | 4 | 5;
 
 interface ProductCardProps {
   /** URL da imagem do produto. */
