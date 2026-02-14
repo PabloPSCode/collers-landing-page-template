@@ -113,8 +113,8 @@ export default function Home() {
           primaryButtonTitle="Comprar o Pro Azul"
           secondaryButtonTitle="Explorar modelos"
           containerClassName="h-[80vh]"
-          onPrimaryClick={() => console.log('Primary click')}
-          onSecondaryClick={() => console.log('Secondary click')}
+          onPrimaryClick={() => console.log("Primary click")}
+          onSecondaryClick={() => console.log("Secondary click")}
         />
 
         <Section size="full" sectionClassName="bg-background py-10">
@@ -135,15 +135,6 @@ export default function Home() {
               </RevealContainer>
             ))}
           </div>
-        </Section>
-
-        <Section size="full" sectionClassName="bg-background pt-4">
-          <BrandMarquee
-            logos={brandLogos}
-            title="Marcas nacionais que caminham com a gente"
-            itemsGap="close"
-            imageFilter="grayscale"
-          />
         </Section>
 
         <div id="colecao">
@@ -193,43 +184,6 @@ export default function Home() {
           </Section>
         </div>
 
-        <div id="comunidade">
-          <Section size="full" sectionClassName="bg-background">
-            <div className="w-1/2 max-w-7xl flex items-center mx-auto">
-              <FadeContainer once className="w-full">
-                <div className="flex flex-col gap-6">
-                  <Title
-                    content="Por que entrar na nossa comunidade"
-                    element="h2"
-                    className="text-3xl sm:text-4xl"
-                  />
-                  <Paragraph
-                    content="A Passo Brasil conecta apaixonados por tênis em todo o país. Aqui você participa de lançamentos exclusivos, ativações de rua e conteúdos feitos para colecionadores."
-                    className="text-foreground/70"
-                  />
-                  <ul className="flex flex-col gap-4">
-                    {communityBenefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-3">
-                        <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 text-primary-700">
-                          <Check size={14} weight="bold" />
-                        </span>
-                        <Paragraph
-                          content={benefit}
-                          className="text-sm sm:text-base"
-                        />
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    label="Entrar na comunidade"
-                    variant="filled"
-                    className="rounded-full px-5 py-3 text-sm sm:text-base bg-secondary-900 text-white hover:bg-secondary-800"
-                  />
-                </div>
-              </FadeContainer>
-            </div>
-          </Section>
-        </div>
 
         <Section size="full" sectionClassName="bg-background/80">
           <div className="w-full max-w-7xl flex flex-col">
