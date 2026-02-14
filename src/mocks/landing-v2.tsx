@@ -71,6 +71,11 @@ export const brandLogos: BrandLogo[] = [
   { src: "/brands/orbita.svg", alt: "Logo Orbita" },
   { src: "/brands/pulsar.svg", alt: "Logo Pulsar" },
   { src: "/brands/stackly.svg", alt: "Logo Stackly" },
+  { src: "/brands/bytefleet.svg", alt: "Logo Bytefleet" },
+  { src: "/brands/nuvemix.svg", alt: "Logo Nuvemix" },
+  { src: "/brands/orbita.svg", alt: "Logo Orbita" },
+  { src: "/brands/pulsar.svg", alt: "Logo Pulsar" },
+  { src: "/brands/stackly.svg", alt: "Logo Stackly" },
 ];
 
 export const featuredProducts = [
