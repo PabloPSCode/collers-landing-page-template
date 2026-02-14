@@ -1,6 +1,5 @@
 "use client";
 
-import FadeContainer from "@/components/animations-and-loading/FadeContainer";
 import RevealContainer from "@/components/animations-and-loading/RevealContainer";
 import ZoomContainer from "@/components/animations-and-loading/ZoomContainer";
 import Button from "@/components/buttons/Button";
@@ -8,7 +7,6 @@ import CategoryCard from "@/components/cards/CategoryCard";
 import InfoCard from "@/components/cards/InfoCard";
 import MetricsCard from "@/components/cards/MetricsCard";
 import ProductCard, { Rating } from "@/components/cards/ProductCard";
-import TestimonialCard from "@/components/cards/TestimonialCard";
 import Footer from "@/components/elements/Footer";
 import LandingHeader from "@/components/elements/LandingHeader";
 import { Section } from "@/components/elements/Section";
@@ -18,14 +16,12 @@ import ProductImageVisualizer from "@/components/media/ProductImageVisualizer";
 import Paragraph from "@/components/typography/Paragraph";
 import Subtitle from "@/components/typography/Subtitle";
 import Title from "@/components/typography/Title";
-import { Check } from "@phosphor-icons/react";
 import { useState, type CSSProperties } from "react";
 
 import VideoSection from "@/components/elements/VideoSection";
 import {
   brandLogos,
   categoryItems,
-  communityBenefits,
   featuredProducts,
   footerColumns,
   galleryImages,
@@ -34,7 +30,6 @@ import {
   landingNavItems,
   socialLinks,
   stats,
-  testimonials,
 } from "@/mocks/landing-v2";
 
 export default function Home() {
@@ -120,12 +115,7 @@ export default function Home() {
         <Section size="full" sectionClassName="bg-background py-10">
           <div className="w-full max-w-7xl grid gap-6 md:grid-cols-3">
             {heroFeatures.map((feature, index) => (
-              <RevealContainer
-                key={feature.title}
-                once
-                delay={index * 2}
-                className="h-full"
-              >
+              <RevealContainer key={feature.title} once delay={index * 2}>
                 <InfoCard
                   title={feature.title}
                   text={feature.text}
@@ -184,34 +174,13 @@ export default function Home() {
           </Section>
         </div>
 
-
-        <Section size="full" sectionClassName="bg-background/80">
-          <div className="w-full max-w-7xl flex flex-col">
-            <div className="flex flex-col gap-4 max-w-xl">
-              <Title
-                content="Porque eles amam a Passo Brasil"
-                element="h2"
-                className="text-3xl sm:text-4xl"
-              />
-              <Paragraph
-                content="Histórias reais de quem usa, coleciona e vive o universo do tênis todos os dias."
-                className="text-foreground/70"
-              />
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {testimonials.map((item, index) => (
-                <RevealContainer key={item.userName} delay={index * 2} once>
-                  <TestimonialCard
-                    avatarUrl={item.avatarUrl}
-                    userName={item.userName}
-                    userRole={item.userRole}
-                    rating={item.rating}
-                    testimonial={item.testimonial}
-                  />
-                </RevealContainer>
-              ))}
-            </div>
-          </div>
+        <Section size="full" sectionClassName="pt-4">
+          <BrandMarquee
+            logos={brandLogos}
+            title="Marcas nacionais que caminham com a gente"
+            itemsGap="close"
+            imageFilter="grayscale"
+          />
         </Section>
 
         <Section size="full" sectionClassName="bg-secondary-900 py-16">
